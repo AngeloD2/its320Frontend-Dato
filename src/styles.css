@@ -3,14 +3,13 @@
 /* You can add global styles to this file, and also import other style files */
 @layer base {
     .screen {
-       @apply flex flex-col items-center mx-auto py-4 gap-4 border-2 m-4 max-h-[768px] overflow-scroll
-              md:flex-row md:items-start
+        @apply flex flex-col items-center mx-auto py-4 gap-4 border-2 m-4 max-h-[768px] overflow-scroll md:flex-row md:items-start
     }
 }
 
 @layer components {
     .card {
-        @apply text-sm flex flex-col p-4 max-w-52 rounded-md
+        @apply text-sm flex flex-col p-4 max-w-52 rounded-md min-h-52 min-w-40
     }
 }
 
@@ -20,6 +19,16 @@
     }
 
     .unique {
-        @apply bg-blue-200 animate-pulse
+        @apply bg-blue-200 perspective-dramatic;
+
+        span {
+            @apply text-xs
+        }
+
+        &:hover {
+            @apply skew-x-6 rotate-x-12 transition-all
+        }
     }
+
+
 }
