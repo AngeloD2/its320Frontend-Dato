@@ -1,0 +1,9 @@
+<p>display-quotes works!</p>
+
+<div>
+    @for (quote of quotes; track quote._id) {
+        <li> id: {{quote._id}}</li>
+        <li> quote: {{quote.quote}}</li>
+    }
+</div>
+

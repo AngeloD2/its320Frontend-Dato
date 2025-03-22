@@ -1,0 +1,22 @@
+<div class="container screen">
+    @for (quote of quotes; track quote._id) {
+
+    @if (quote && quote.author === "Nelson Mandela") {
+    <div class="card unique">
+        <span class="text-xs"> id: {{quote._id}}</span>
+        <span class="text-xs"> Author: {{quote.author}}</span>
+        <span class="text-xs"> Title: {{quote.title}}</span>
+        <span class="text-xs w-40"> Quote: {{quote.quote}}</span>
+        <span class="text-xs"> Published: {{quote.date}}</span>
+    </div>
+    } @else {
+    <div class="card common">
+        <span class="text-xs"> id: {{quote._id}}</span>
+        <span class="text-xs"> Author: {{quote.author}}</span>
+        <span class="text-xs"> Title: {{quote.title}}</span>
+        <span class="text-xs w-40"> Quote: {{quote.quote}}</span>
+        <span class="text-xs"> Published: {{quote.date}}</span>
+    </div>
+    }
+    }
+</div>
